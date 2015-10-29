@@ -33,5 +33,16 @@ body {
 .glass {
   background: rgba(255, 255, 255, .3); /* red, green, blue, alpha */
   background: hsla(0, 0%, 100%, .3); /* hue, saturation, lightness, alpha */
-  filter: blur(15px); /* doesn't do what we want… */
+}
+
+
+/* add: ::before pseudo-element, absolutely positioned within .glass */
+.glass {
+  position: relative;
+}
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;
+  background: hotpink; opacity: .7; /* debug */
 }

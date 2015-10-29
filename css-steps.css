@@ -1,0 +1,37 @@
+
+body {
+  /* Positioning: vertical centering with flexbox: */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Make body taking the full size of its parent (html): */
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+html {
+  /* Make html taking the full height of its parent (the window) */
+  box-sizing: border-box;
+  height: 100%;
+}
+/* basic design for "glass" container */
+.glass {
+  border-radius: .5em;
+  border: 1px solid hsla(0, 0%, 100%, .1);
+  box-shadow: .2em .2em 1.2em 0em; /* offsetX offsetY blur scale [color] */
+  font-family: Georgia, serif;
+  font-size: 2em;
+  font-style: italic;
+  margin: 1em;
+  padding: 1em;
+}
+
+/* 1st step : background on body and .glass */
+body {
+  background: url(img/night-town.jpg) 50% / cover fixed;
+  /* 50% : abbreviation for 50% 50% = background-position. See the difference if you put 0 */
+}
+.glass {
+  background: rgba(255, 255, 255, .3); /* red, green, blue, alpha */
+  background: hsla(0, 0%, 100%, .3); /* hue, saturation, lightness, alpha */
+}

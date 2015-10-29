@@ -26,9 +26,8 @@ html {
   padding: 1em;
 }
 /* Interesting from here */
-body {
+body, .glass::before {
   background: url(img/night-town.jpg) 50% / cover fixed;
-  /* 50% : abbreviation for 50% 50% = background-position. See the difference if you put 0 */
 }
 .glass {
   background: rgba(255, 255, 255, .3); /* red, green, blue, alpha */
@@ -44,5 +43,5 @@ body {
   content: '';
   position: absolute;
   top: 0; bottom: 0; right: 0; left: 0;
-  background: hotpink; opacity: .7; /* debug */
+  border: 4px solid hotpink;
 }

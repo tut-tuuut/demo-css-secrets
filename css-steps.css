@@ -25,8 +25,7 @@ html {
   margin: 1em;
   padding: 1em;
 }
-
-/* 1st step : background on body and .glass */
+/* Interesting from here */
 body {
   background: url(img/night-town.jpg) 50% / cover fixed;
   /* 50% : abbreviation for 50% 50% = background-position. See the difference if you put 0 */
@@ -34,4 +33,5 @@ body {
 .glass {
   background: rgba(255, 255, 255, .3); /* red, green, blue, alpha */
   background: hsla(0, 0%, 100%, .3); /* hue, saturation, lightness, alpha */
+  filter: blur(15px); /* doesn't do what we want… */
 }

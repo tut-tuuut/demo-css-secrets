@@ -38,6 +38,7 @@ body, .glass::before {
 /* add: ::before pseudo-element, absolutely positioned within .glass */
 .glass {
   position: relative;
+  overflow: hidden;
 }
 .glass::before {
   content: '';
@@ -45,4 +46,5 @@ body, .glass::before {
   top: 0; bottom: 0; right: 0; left: 0;
   filter: blur(15px);
   z-index: -1;
+  margin: -20px; /* to make the blur effect reach .glass edges */
 }
